@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import Card from '../../components/Card';
 
 export default function Countries() {
     const [countries, setCountries] = useState([]);
@@ -12,11 +12,19 @@ export default function Countries() {
         } catch (error) {
             console.log(error)
         }
-    }
+    };
 
-    useEffect(() => {
+    useEffect(() => { 
         fetchCountries();
     }, []);
 
-    return <> {countries.length}</>
+    return (
+        <>
+        <div>
+            {countries.map((country) => (
+                <Card key={country.name.common} {...country} />
+            ))}
+        </div>
+        </>
+    );
 }
