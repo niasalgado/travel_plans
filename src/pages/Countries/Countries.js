@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import Card from '../../components/Card/Card';
+import CountryCard from '../../components/CountryCard/CountryCard';
 import NavBar from '../../components/NavBar/NavBar';
 
 import './countries.css';
@@ -27,7 +27,7 @@ export default function Countries( {setPlanCountry, planCountry} ) {
         <div>Countries</div>
         <div className="cardGrid">
             {countries.map((country) => (
-                <Card key={country.name.common} {...country} setPlanCountry={setPlanCountry} planCountry={planCountry} />
+                <CountryCard key={country.name.common} {...country} setPlanCountry={setPlanCountry} planCountry={planCountry} />
             ))}
         </div>
         </>
