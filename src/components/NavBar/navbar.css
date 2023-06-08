@@ -1,0 +1,12 @@
+.nav {
+    display: flex;
+    justify-content: flex-end;
+    padding: 30px;
+    width: 100%;
+    top: -1;
+
+}
+.nav a {
+    padding-right: 2.5em;
+    font-weight: 500;
+}
