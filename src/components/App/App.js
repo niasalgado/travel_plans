@@ -16,7 +16,7 @@ export default function App() {
         <Route path='/countries' element={
           <Countries setPlanCountry={setPlanCountry} planCountry={planCountry} /> } 
           />
-        <Route path='/mytrips' element={<MyTrips />} />
+        <Route path='/mytrips' element={<MyTrips setPlanCountry={setPlanCountry} planCountry={planCountry} />} />
         {/* TODO: create error page & route here! */}
       </Routes>
     </BrowserRouter>

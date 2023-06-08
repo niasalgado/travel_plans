@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import MyTrips from '../../pages/MyTrips/MyTrips';
+import React from 'react';
 import './card.css';
 
 export default function Card({flags, name, capital, setPlanCountry, planCountry}) {
@@ -20,7 +19,6 @@ export default function Card({flags, name, capital, setPlanCountry, planCountry}
       {/* TODO: add functionality to plan and visited buttons */}
       <button onClick={() => handleClick(name.common)}>Add to Plan</button>
       <button>Already Visited</button>
-
     </div>
   )
 }
