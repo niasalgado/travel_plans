@@ -9,13 +9,14 @@ export default function Country() {
     useEffect(() => {
         const fetchCountry = async() => {
             try {
-                const response = await fetch('https://restcountries.com/v3.1/name/' + {name})
+                const response = await fetch(`https://restcountries.com/v3.1/name/${name}`)
                 const data = await response.json()
                 setCountry(data)
             } catch (error) {
                 console.log(error)
             }
         }
+    fetchCountry();
     }, [name]);
 
   return (
@@ -23,7 +24,15 @@ export default function Country() {
         <NavBar />
         <div>
             {country.map((c) => (
-                <h1>{c.name.common}</h1>
+                <div key={c.name}>
+                    <img src={c.flags.svg} alt={c.flags.alt} />
+                    <ul>
+                        <li><h1>{c.name.common}</h1></li>
+                        <li>Capital: {c.capital}</li>
+                        <li>Population: {c.population}</li>
+                        <li>Continent: {c.continents}</li>
+                    </ul>
+                </div>
             ))}
         </div>
     </>
