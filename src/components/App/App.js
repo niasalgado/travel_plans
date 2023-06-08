@@ -14,7 +14,7 @@ export default function App() {
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<Home />}></Route>
-        <Route path='/:country' element={<Country />}></Route>
+        <Route path='/:name' element={<Country />}></Route>
         <Route path='/countries' element={
           <Countries 
           setPlanCountry={setPlanCountry}

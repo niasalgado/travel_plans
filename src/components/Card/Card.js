@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './card.css';
 
 export default function Card({flags, name, capital, setPlanCountry, planCountry}) {
@@ -6,7 +7,7 @@ export default function Card({flags, name, capital, setPlanCountry, planCountry}
   const handleClick = (countryName) => setPlanCountry([...planCountry, countryName]);
 
   return (
-    <Link to={`/${country}`}>
+    <Link to={`/${name.common}`}>
       <div className="countryCard">
         <img className='flag-img' src={flags.svg} alt={flags.alt}></img>
         <h2>{name.common}</h2>
