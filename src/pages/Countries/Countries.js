@@ -24,6 +24,7 @@ export default function Countries() {
     return (
         <>
         <NavBar />
+        <div>Countries</div>
         <div className="cardGrid">
             {countries.map((country) => (
                 <Card key={country.name.common} {...country} />

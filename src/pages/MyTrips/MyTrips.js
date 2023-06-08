@@ -6,7 +6,19 @@ export default function MyTrips() {
   return (
     <>
     <NavBar />
-    <div>MyTrips</div>
+    <div>My Trips</div>
+    <div>
+        <h3>Planning To Visit:</h3>
+        <ul>
+            
+        </ul>
+    </div>
+    <div>
+        <h3>Already Visitied:</h3>
+        <ul>
+
+        </ul>
+    </div>
     </>
   )
 }
