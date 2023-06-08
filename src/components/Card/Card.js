@@ -1,18 +1,25 @@
 import React, { useState } from 'react';
+import MyTrips from '../../pages/MyTrips/MyTrips';
 import './card.css';
 
-export default function Card( {flags, name} ) {
+export default function Card({flags, name, capital, setPlanCountry, planCountry}) {
   
-  const [planCountry, setPlanCountry] = useState();
-  const handleClick = () => setPlanCountry();
+  const handleClick = (countryName) => setPlanCountry([...planCountry, countryName]);
 
   return (
     <div className="cardDet">
-      <img className='flag-img' src={flags.svg} alt="{name.common} flag"></img>
+      <img className='flag-img' src={flags.svg} alt={flags.alt}></img>
       <h2>{name.common}</h2>
-      {/* TODO: add functionality to plan and visited buttons */}
 
-      <button onClick={handleClick}>Add to Plan</button>
+      <ul>
+        <li>capital: {capital}</li>
+        <li></li>
+        <li></li>
+      </ul>
+
+      {/* TODO: add functionality to plan and visited buttons */}
+      <button onClick={() => handleClick(name.common)}>Add to Plan</button>
+      <button>Already Visited</button>
 
     </div>
   )

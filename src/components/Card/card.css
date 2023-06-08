@@ -1,6 +1,6 @@
 .cardDet {
-    border: 3px solid red;
-    width: 33%;
+    /* border: 3px solid red; */
+    margin: 10px;
 }
 .flag-img {
     height: 80px;
