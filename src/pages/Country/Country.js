@@ -19,21 +19,35 @@ export default function Country() {
     fetchCountry();
     }, [name]);
 
-    const [currency, setCurrency] = useState(null);
+
+    const [exchangeRate, setexchangeRate] = useState(1);
+    console.log("exchange rate: " , exchangeRate)
 
     useEffect(() => {
-        const fetchCurrency = async() => {
+        const fetchRate = async() => {
             try {
-                const response = await fetch('')
-                const data = await response.json()
-                setCurrency(data)
+                // TODO: reformat link to populate with country code from country API below
+                const url = 'https://currency-converter5.p.rapidapi.com/currency/convert?format=json&from=USD&to=CAD&amount=1'; 
+                const options = {
+                    method: 'GET',
+                    headers: {
+                        'X-RapidAPI-Key': '81c51a9c6amshec235b1971e0be0p17dcc6jsn6d8c8cc32c53',
+                        'X-RapidAPI-Host': 'currency-converter5.p.rapidapi.com'
+                    }
+                };
+                const response = await fetch(url, options);
+	            const data = await response.json();
+                // TODO: extract object within object of rates from data returned
+                setexchangeRate(data.rates)
+                // TODO: remove console log below
+	            console.log(data.rates);
             } catch (error) {
                 console.log(error)
             }
         }
-        fetchCurrency();
+        fetchRate();
     }, []);
-
+    
   return (
     <>
         <NavBar />
@@ -50,7 +64,7 @@ export default function Country() {
                             <li>Capital: {c.capital}, {c.name.common}</li>
                             <li>Population: {c.population.toLocaleString()}</li>
                             <li>Continent: {c.continents}</li>
-                            <li>Currency: </li>
+                            <li>Exchange Rate from $1 USD = </li>
                         </ul>
                     </div>
                 </div>
