@@ -4,14 +4,30 @@ import NavBar from '../../components/NavBar/NavBar';
 
 export default function Country() {
     const [country, setCountry] = useState([]);
+
+    const [countryCurrency, setCountryCurrency] = useState('');
+    console.log('currrrrr: ', countryCurrency)
+
+    const [currSymbol, setcurrSymbol] = useState('');
+    console.log('currr SYMBOL: ', currSymbol)
+
     const {name} = useParams();
 
+    
     useEffect(() => {
         const fetchCountry = async() => {
             try {
                 const response = await fetch(`https://restcountries.com/v3.1/name/${name}`)
+
                 const data = await response.json()
                 setCountry(data)
+
+                const currency = Object.entries(data[0].currencies)[0][0];
+                setCountryCurrency(currency)
+
+                const symbol = Object.entries(country[0].currencies)[0][1].symbol;
+                setcurrSymbol(symbol)
+                
             } catch (error) {
                 console.log(error)
             }
@@ -26,8 +42,7 @@ export default function Country() {
     useEffect(() => {
         const fetchRate = async() => {
             try {
-                // TODO: reformat link to populate with country code from country API below
-                const url = 'https://currency-converter5.p.rapidapi.com/currency/convert?format=json&from=USD&to=CAD&amount=1'; 
+                const url = `https://currency-converter5.p.rapidapi.com/currency/convert?format=json&from=USD&to=${countryCurrency}&amount=1`; 
                 const options = {
                     method: 'GET',
                     headers: {
@@ -37,16 +52,19 @@ export default function Country() {
                 };
                 const response = await fetch(url, options);
 	            const data = await response.json();
-                // TODO: extract object within object of rates from data returned
-                setexchangeRate(data.rates)
-                // TODO: remove console log below
-	            console.log(data.rates);
+
+                // TODO: extract rate number within object of rates from data returned
+                let rate = Object.entries(data.rates)[0][1].rate
+                console.log('RATE: ', rate)
+                setexchangeRate(rate)
             } catch (error) {
                 console.log(error)
             }
         }
         fetchRate();
     }, []);
+
+
     
   return (
     <>
@@ -64,9 +82,12 @@ export default function Country() {
                             <li>Capital: {c.capital}, {c.name.common}</li>
                             <li>Population: {c.population.toLocaleString()}</li>
                             <li>Continent: {c.continents}</li>
-                            <li>Exchange Rate from $1 USD = </li>
+                            <li>Exchange Rate from $1 USD = {currSymbol} {exchangeRate} {countryCurrency}</li>
                         </ul>
                     </div>
+
+
+
                 </div>
             ))}
         </div>
