@@ -10,16 +10,6 @@ export default function App() {
 
   const [planCountry, setPlanCountry] = useState([]);
 
-  function handleResponse(response)
-  
-  useEffect(() => {
-    google.accounts.id.initialize({
-      client_id: '330069934010-tk5gg6qmrade1pkh5uo79koj6u3pk5th.apps.googleusercontent.com',
-      callback: handleResponse
-    });
-
-    }, []);
-
   return (
     <BrowserRouter>
       <Routes>

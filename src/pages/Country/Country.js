@@ -19,6 +19,21 @@ export default function Country() {
     fetchCountry();
     }, [name]);
 
+    const [currency, setCurrency] = useState(null);
+
+    useEffect(() => {
+        const fetchCurrency = async() => {
+            try {
+                const response = await fetch('')
+                const data = await response.json()
+                setCurrency(data)
+            } catch (error) {
+                console.log(error)
+            }
+        }
+        fetchCurrency();
+    }, []);
+
   return (
     <>
         <NavBar />
