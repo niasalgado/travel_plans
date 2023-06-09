@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from '../../pages/Home/Home';
 import Countries from '../../pages/Countries/Countries';
@@ -9,6 +9,16 @@ import './App.css';
 export default function App() {
 
   const [planCountry, setPlanCountry] = useState([]);
+
+  function handleResponse(response)
+  
+  useEffect(() => {
+    google.accounts.id.initialize({
+      client_id: '330069934010-tk5gg6qmrade1pkh5uo79koj6u3pk5th.apps.googleusercontent.com',
+      callback: handleResponse
+    });
+
+    }, []);
 
   return (
     <BrowserRouter>

@@ -25,13 +25,19 @@ export default function Country() {
         <div>
             {country.map((c) => (
                 <div key={c.name}>
-                    <img src={c.flags.svg} alt={c.flags.alt} />
-                    <ul>
-                        <li><h1>{c.name.common}</h1></li>
-                        <li>Capital: {c.capital}</li>
-                        <li>Population: {c.population}</li>
-                        <li>Continent: {c.continents}</li>
-                    </ul>
+                    <div id='countryFlagImg'>
+                        <img src={c.flags.svg} alt={c.flags.alt} />
+                    </div>
+
+                    <div id='countryDetails'>
+                        <h1>{c.name.common}</h1>
+                        <ul>
+                            <li>Capital: {c.capital}, {c.name.common}</li>
+                            <li>Population: {c.population.toLocaleString()}</li>
+                            <li>Continent: {c.continents}</li>
+                            <li>Currency: </li>
+                        </ul>
+                    </div>
                 </div>
             ))}
         </div>
