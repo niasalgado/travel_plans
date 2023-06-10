@@ -25,14 +25,12 @@ export default function Countries( {setPlanCountry, planCountry} ) {
     return (
         <>
         <NavBar />
-        <div>Countries</div>
-
         <div id='searchContainer'>
             <form>
                 <input type='text' id='searchbar' placeholder='Search for a country' required></input>
             </form>
             <form>
-                <select id='filter-by-region'>
+                <select id='region-selector'>
                     {regions.map((region) => (
                         <option value={region}>
                             {region}
