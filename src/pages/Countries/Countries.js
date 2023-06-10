@@ -20,13 +20,29 @@ export default function Countries( {setPlanCountry, planCountry} ) {
         fetchCountries();
     }, []);
 
-    const regions = ['Africa', 'Europe', 'Asia', 'Americas', 'Oceania', 'Antarctic']
+    const regions = ['Africa', 'Europe', 'Asia', 'Americas', 'Oceania', 'Antarctic'];
+    const [search, setSearch] = useState();
+
+    async function searchCountry() {
+        try {
+            const response = await fetch(`https://restcountries.com/v3.1/name/${search}`)
+            const data = await response.json();
+            setSearch(data)
+        } catch (error) {
+            console.log(error)
+        }
+    }
+
+    function handleSearch(evt) {
+        searchCountry()
+    }
+
 
     return (
         <>
         <NavBar />
         <div id='searchContainer'>
-            <form>
+            <form onSubmit={handleSearch()}>
                 <input type='text' id='searchbar' placeholder='Search for a country' required></input>
             </form>
             <form>
