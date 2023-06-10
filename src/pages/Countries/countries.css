@@ -1,3 +1,14 @@
+#searchContainer {
+    display: flex;
+}
+#searchbar {
+    padding: 10px;
+    border-radius: 5px;
+}
+#filter-by-region {
+    padding: 10px;
+    border-radius: 5px;
+}
 .cardGrid {
     display: flex;
     /* border: 5px solid blue; */
