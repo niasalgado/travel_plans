@@ -5,6 +5,12 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  border: 2px solid red;
+  padding: 2em;
+}
+
+img {
+  border-radius: 7px;
 }
 
 code {
