@@ -1,7 +1,5 @@
 #searchContainer {
     display: flex;
-    flex-direction: row;
-    gap: 2;
     width: 100%;
 }
 #searchbar {
@@ -20,5 +18,8 @@
 }
 .cardGrid {
     display: flex;
-    /* border: 5px solid blue; */
+    flex-flow: row wrap;
+    border: 2px solid blue;
+    margin-top: 1.5em;
+    justify-content: space-around;
 }

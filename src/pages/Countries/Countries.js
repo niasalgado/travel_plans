@@ -10,7 +10,7 @@ export default function Countries( {setPlanCountry, planCountry} ) {
             const response = await fetch('https://restcountries.com/v3.1/all');
             const data = await response.json();
 
-            setCountries(data.slice(10,20));
+            setCountries(data.slice(10,30));
         } catch (error) {
             console.log(error)
         }

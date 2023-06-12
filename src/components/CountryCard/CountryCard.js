@@ -11,12 +11,6 @@ export default function CountryCard({flags, name, capital, setPlanCountry, planC
       <Link to={`/${name.common}`}>
           <img className='flag-img' src={flags.svg} alt={flags.alt}></img>
           <h2>{name.common}</h2>
-
-          <ul>
-            <li>capital: {capital}</li>
-            <li></li>
-            <li></li>
-          </ul>
       </Link>
       {/* TODO: add functionality to visited buttons */}
       <button onClick={() => handleClick(name.common)}>Add to Plan</button>
