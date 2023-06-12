@@ -3,7 +3,7 @@ import CountryCard from '../../components/CountryCard/CountryCard';
 import NavBar from '../../components/NavBar/NavBar';
 import './countries.css';
 
-export default function Countries( {setPlanCountry, planCountry} ) {
+export default function Countries( {setPlanCountry, planCountry, visitedCountry, setVisitedCountry} ) {
     const [countries, setCountries] = useState([]);
     const fetchCountries = async () => {
         try {
@@ -67,7 +67,7 @@ export default function Countries( {setPlanCountry, planCountry} ) {
 
         <div className="cardGrid">
             {countries.map((country) => (
-                <CountryCard key={country.name.common} {...country} setPlanCountry={setPlanCountry} planCountry={planCountry} />
+                <CountryCard key={country.name.common} {...country} setPlanCountry={setPlanCountry} planCountry={planCountry} setVisitedCountry={setVisitedCountry} visitedCountry={visitedCountry} />
             ))}
         </div>
         </>

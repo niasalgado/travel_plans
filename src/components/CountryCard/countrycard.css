@@ -1,16 +1,40 @@
 .countryCard {
-    border: 3px solid red; 
+    /* border: 3px solid red;  */
     margin-bottom: 30px;
-    width: 28%;
+    min-width: 28%;
+    position: relative;
 }
-.countryCard a {
+
+a {
     text-decoration: none;
+    color: #0b5394;
 }
+
+h2 {
+    margin-bottom: 2em;
+}
+
 .flag-img {
-    height: auto;
+    height: 150px;
     width: 100%;
 }
-button {
-    margin-bottom:0px;
-    display: inline-block;
+
+#trips-button-container {
+    bottom: 0px;
+    position: absolute;
+}
+
+.trips-button {
+  background-color: white;
+  border-radius: 3px;
+  border: 1px solid lightgray;
+  color: #0b5394;
+  cursor: pointer;
+  font-size: 10px;
+  margin-right: 3px;
+  padding: 8px .8em;
+}
+
+.trips-button:hover {
+  background-color: #f2f2f2;
 }

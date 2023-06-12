@@ -1,25 +1,26 @@
 import React from 'react'
-import './mytrips.css'
 import NavBar from '../../components/NavBar/NavBar'
+import './mytrips.css'
 
-export default function MyTrips( {planCountry} ) {
+export default function MyTrips( {planCountry, visitedCountry} ) {
   return (
     <>
     <NavBar />
-    <div>My Trips</div>
+      <div className='listsContainer'>
+        <div className="trips-list">
+        <h3>Planning To Visit</h3>
+          {planCountry.map((country) => {
+            return <li>{country}</li>
+          })}
+        </div>
 
-    <div className='listsContainer'>
-        <h3>Planning To Visit:</h3>
-            <div className="planList">
-                {planCountry.map((country) => {
-                    return <li>{country}</li>
-                })}
-            </div>
-        
-        <h3>Already Visited:</h3>
-            <div>
-            </div>
-    </div>
+        <div className="trips-list">
+        <h3>Already Visited</h3>
+          {visitedCountry.map((country) => {
+            return <li>{country}</li>
+          })}
+        </div>
+      </div>
     </>
   )
 }

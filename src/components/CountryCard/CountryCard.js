@@ -2,9 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './countrycard.css';
 
-export default function CountryCard({flags, name, capital, setPlanCountry, planCountry}) {
+export default function CountryCard({flags, name, setPlanCountry, planCountry, visitedCountry, setVisitedCountry}) {
   
-  const handleClick = (countryName) => setPlanCountry([...planCountry, countryName]);
+  const handlePlanClick = (countryName) => setPlanCountry([...planCountry, countryName]);
+  const handleVisitedClick = (countryName) => setVisitedCountry([...visitedCountry, countryName]);
 
   return (
     <div className="countryCard">
@@ -13,8 +14,10 @@ export default function CountryCard({flags, name, capital, setPlanCountry, planC
           <h2>{name.common}</h2>
       </Link>
       {/* TODO: add functionality to visited buttons */}
-      <button onClick={() => handleClick(name.common)}>Add to Plan</button>
-      <button>Already Visited</button>
+      <div id='trips-button-container'>
+        <button onClick={() => handlePlanClick(name.common)} className='trips-button'>Add to Plan</button>
+        <button onClick={() => handleVisitedClick(name.common)} className='trips-button'>Already Visited</button>
+      </div>
     </div>
   )
 }
