@@ -42,7 +42,7 @@ Travel Plans is an organizing app, where users can view a list of every country 
         ````
 
 ## Coding Challenges
-The most challenging aspect of this project was learning how to access, parse, and render information from two third-party API's.
+The most challenging aspect of this project was trying to implement a back-end, and it is something I will continue to develop my skillset on, to provide full app functionality. It was also a bit challenging to have two third-party API's communicate seamlessly.
 
 ## Next Steps
 - To add a backend so a user's plans can be saved to a database, and accessed every time they log in.
