@@ -14,7 +14,8 @@ export default function Home() {
         try {
             const response = await fetch('https://restcountries.com/v3.1/all');
             const data = await response.json();
-            setHomeCountries(data.slice(240,250));
+            let rand = Math.floor(Math.random() * 180);
+            setHomeCountries(data.slice(rand, (rand + 10)));
         } catch (error) {
             console.log(error)
         }

@@ -56,6 +56,7 @@ Please feel free to message me on Slack for any questions, suggestions, bug id's
 ## Acknowledgments
 - Implement Google OAuth: https://www.youtube.com/watch?v=HtJKUQXmtok
 - Flexbox styling tips: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+- React Component Carousel: https://swiperjs.com/demos#slides-per-view
 - Adobe SEI'23 Instructional Team 
 
 
