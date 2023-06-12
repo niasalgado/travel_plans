@@ -1,7 +1,7 @@
 # Travel Plans
 Travel Plans is an organizing app, where users can view a list of every country in the world, view details of a selected country, including a currency exchange rate, and add countries to a "plan to visit" list or an "already visited" list. It is created to help world travelers plan and keep track of their adventures!
 
-<!-- [View Project on Netlify](netlify link) -->
+[View Project on Netlify](https://dapper-dieffenbachia-085fcf.netlify.app/)
 
 <hr style='border: 3px solid black'>
 
