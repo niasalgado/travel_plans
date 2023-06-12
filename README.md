@@ -1,6 +1,63 @@
-# Getting Started with Create React App
+# Travel Plans
+Travel Plans is an organizing app, where users can view a list of every country in the world, view details of a selected country, including a currency exchange rate, and add countries to a "plan to visit" list or an "already visited" list. It is created to help world travelers plan and keep track of their adventures!
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<!-- [View Project on Netlify](netlify link) -->
+
+<hr style='border: 3px solid black'>
+
+### Table of Contents
+
+- [Getting Started/Installation](#getting-started)
+- [Wireframe](#wireframe)
+- [Technolgies Used](#technologies-used)
+- [Coding Challenges](#coding-challenges)
+- [Next Steps](#next-steps)
+- [Contributions](#contributions)
+
+<hr style='border: 3px solid black'>
+
+## Getting Started / Installation
+    Planning materials: https://trello.com/b/h95Cw5W5/capstone-project-4
+
+    1. Fork repo from GitHub
+    2. Clone into code editor
+    3. Install all necessary dependencies with:
+        ```
+        npm i
+        ````
+    4. To run the app in development mode:
+        ```
+        npm start
+        ````
+
+## Site Preview
+<!-- ![SitePreview](./public/images/HomePage.png)
+![SitePreview](./public/images/CocktailIndex.png)
+![SitePreview](./public/images/CocktailPage.png) -->
+
+## Technologies Used
+- Javascript
+- ReactJS Framework
+- HTML
+- CSS
+- Trello and InVision for project planning
+- Netlify for app deployment
+
+## Coding Challenges
+The most challenging aspect of this project was learning how to access, parse, and render information from two third-party API's.
+
+## Next Steps
+- To add a backend so user's plans can be saved and accessed every time they log in.
+
+## Contributions
+Front-end development: Nia Salgado<br/>
+Please feel free to message me on Slack for any questions, suggestions, bug id's, and/or contributions! @Nia Salgado
+
+## Acknowledgments
+- Implement Google OAuth: https://www.youtube.com/watch?v=HtJKUQXmtok
+- Flexbox styling tips: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+- Adobe SEI'23 Instructional Team 
+
 
 ## Available Scripts
 
@@ -44,27 +101,3 @@ You don't have to ever use `eject`. The curated feature set is suitable for smal
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

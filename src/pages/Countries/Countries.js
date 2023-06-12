@@ -9,7 +9,6 @@ export default function Countries( {setPlanCountry, planCountry, visitedCountry,
         try {
             const response = await fetch('https://restcountries.com/v3.1/all');
             const data = await response.json();
-
             setCountries(data);
         } catch (error) {
             console.log(error)
@@ -20,10 +19,8 @@ export default function Countries( {setPlanCountry, planCountry, visitedCountry,
         fetchCountries();
     }, []);
 
-    const regions = ['Africa', 'Europe', 'Asia', 'Americas', 'Oceania', 'Antarctic'];
     const [search, setSearch] = useState('');
-
-    async function searchCountry() {
+    const searchCountries = async () => {
         try {
             const response = await fetch(`https://restcountries.com/v3.1/name/${search}`)
             const data = await response.json();
@@ -35,9 +32,8 @@ export default function Countries( {setPlanCountry, planCountry, visitedCountry,
 
     function handleSearch(evt) {
         evt.preventDefault()
-        searchCountry()
+        searchCountries()
     }
-
 
     return (
         <>
@@ -52,15 +48,7 @@ export default function Countries( {setPlanCountry, planCountry, visitedCountry,
                     placeholder='Search for a country' 
                     required>    
                 </input>
-            </form>
-            <form>
-                <select id='region-selector'>
-                    {regions.map((region) => (
-                        <option value={region}>
-                            {region}
-                        </option>
-                    ))}
-                </select>
+                <button type='submit' value='search' className='trips-button'>Search</button>
             </form>
         </div>
 
