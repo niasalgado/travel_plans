@@ -7,14 +7,27 @@ Travel Plans is an organizing app, where users can view a list of every country 
 
 ### Table of Contents
 
-- [Getting Started/Installation](#getting-started)
-- [Wireframe](#wireframe)
 - [Technolgies Used](#technologies-used)
+- [Getting Started/Installation](#getting-started)
 - [Coding Challenges](#coding-challenges)
 - [Next Steps](#next-steps)
 - [Contributions](#contributions)
 
 <hr style='border: 3px solid black'>
+
+## Site Preview
+![SitePreview](./public/images/homepage.png)
+![SitePreview](./public/images/countries.png)
+![SitePreview](./public/images/country.png)
+![SitePreview](./public/images/planlists.png)
+
+## Technologies Used
+- Javascript
+- ReactJS Framework
+- HTML
+- CSS
+- Trello and InVision for project planning
+- Netlify for app deployment
 
 ## Getting Started / Installation
     Planning materials: https://trello.com/b/h95Cw5W5/capstone-project-4
@@ -30,24 +43,11 @@ Travel Plans is an organizing app, where users can view a list of every country 
         npm start
         ````
 
-## Site Preview
-<!-- ![SitePreview](./public/images/HomePage.png)
-![SitePreview](./public/images/CocktailIndex.png)
-![SitePreview](./public/images/CocktailPage.png) -->
-
-## Technologies Used
-- Javascript
-- ReactJS Framework
-- HTML
-- CSS
-- Trello and InVision for project planning
-- Netlify for app deployment
-
 ## Coding Challenges
 The most challenging aspect of this project was learning how to access, parse, and render information from two third-party API's.
 
 ## Next Steps
-- To add a backend so user's plans can be saved and accessed every time they log in.
+- To add a backend so a user's plans can be saved to a database, and accessed every time they log in.
 
 ## Contributions
 Front-end development: Nia Salgado<br/>
@@ -56,12 +56,11 @@ Please feel free to message me on Slack for any questions, suggestions, bug id's
 ## Acknowledgments
 - Implement Google OAuth: https://www.youtube.com/watch?v=HtJKUQXmtok
 - Flexbox styling tips: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
-- React Component Carousel: https://swiperjs.com/demos#slides-per-view
+- React component carousel: https://swiperjs.com/demos#slides-per-view
 - Adobe SEI'23 Instructional Team 
 
 
 ## Available Scripts
-
 In the project directory, you can run:
 
 ### `npm start`
@@ -96,9 +95,3 @@ If you aren't satisfied with the build tool and configuration choices, you can `
 Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
