@@ -1,6 +1,8 @@
 .listsContainer {
     display: flex;
     flex: wrap;
+    justify-content: center;
+    margin-top: 2em;
 }
 .trips-list {
     margin: 10px;

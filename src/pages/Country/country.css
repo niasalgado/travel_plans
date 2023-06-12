@@ -1,0 +1,25 @@
+#country-container {
+    margin-top: 20vh;
+    display: flex;
+    justify-content: center;
+}
+
+#country-container div {
+    width: 50%;
+    padding: 1.5em;
+}
+
+#country-flag-img img {
+    width: 100%;
+}
+
+#country-details h1 {
+    margin-bottom: 0;
+}
+
+#country-dets-list {
+    list-style-type: none;
+    padding-left: 0;
+    font-size: large;
+    line-height: 150%;
+}

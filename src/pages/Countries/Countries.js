@@ -10,7 +10,7 @@ export default function Countries( {setPlanCountry, planCountry, visitedCountry,
             const response = await fetch('https://restcountries.com/v3.1/all');
             const data = await response.json();
 
-            setCountries(data.slice(10,30));
+            setCountries(data);
         } catch (error) {
             console.log(error)
         }
@@ -22,7 +22,6 @@ export default function Countries( {setPlanCountry, planCountry, visitedCountry,
 
     const regions = ['Africa', 'Europe', 'Asia', 'Americas', 'Oceania', 'Antarctic'];
     const [search, setSearch] = useState('');
-    console.log('search text: ', search)
 
     async function searchCountry() {
         try {

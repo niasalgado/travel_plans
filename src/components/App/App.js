@@ -32,7 +32,6 @@ export default function App() {
           setVisitedCountry={setVisitedCountry}
           />
           } />
-        {/* TODO: create error page & route here! */}
       </Routes>
     </BrowserRouter>
   );

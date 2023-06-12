@@ -13,9 +13,8 @@ export default function CountryCard({flags, name, setPlanCountry, planCountry, v
           <img className='flag-img' src={flags.svg} alt={flags.alt}></img>
           <h2>{name.common}</h2>
       </Link>
-      {/* TODO: add functionality to visited buttons */}
       <div id='trips-button-container'>
-        <button onClick={() => handlePlanClick(name.common)} className='trips-button'>Add to Plan</button>
+        <button onClick={() => handlePlanClick(name.common)} className='trips-button'>Plan to Visit</button>
         <button onClick={() => handleVisitedClick(name.common)} className='trips-button'>Already Visited</button>
       </div>
     </div>

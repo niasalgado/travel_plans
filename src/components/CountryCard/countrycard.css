@@ -1,13 +1,13 @@
 .countryCard {
-    /* border: 3px solid red;  */
+    margin-left: 5px;
+    margin-right: 5px;
     margin-bottom: 30px;
-    min-width: 28%;
+    min-width: 20%;
     position: relative;
 }
 
 a {
     text-decoration: none;
-    color: #0b5394;
 }
 
 h2 {
@@ -28,7 +28,6 @@ h2 {
   background-color: white;
   border-radius: 3px;
   border: 1px solid lightgray;
-  color: #0b5394;
   cursor: pointer;
   font-size: 10px;
   margin-right: 3px;

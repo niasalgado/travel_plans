@@ -1,15 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import NavBar from '../../components/NavBar/NavBar';
+import './country.css';
 
 export default function Country() {
     const [country, setCountry] = useState([]);
 
     const [countryCurrency, setCountryCurrency] = useState('');
-    console.log('currrrrr: ', countryCurrency)
 
     const [currSymbol, setcurrSymbol] = useState('');
-    console.log('currr SYMBOL: ', currSymbol)
 
     const {name} = useParams();
 
@@ -37,7 +36,6 @@ export default function Country() {
 
 
     const [exchangeRate, setexchangeRate] = useState(1);
-    console.log("exchange rate: " , exchangeRate)
 
     useEffect(() => {
         const fetchRate = async() => {
@@ -53,9 +51,7 @@ export default function Country() {
                 const response = await fetch(url, options);
 	            const data = await response.json();
 
-                // TODO: extract rate number within object of rates from data returned
                 let rate = Object.entries(data.rates)[0][1].rate
-                console.log('RATE: ', rate)
                 setexchangeRate(rate)
             } catch (error) {
                 console.log(error)
@@ -71,15 +67,15 @@ export default function Country() {
         <NavBar />
         <div>
             {country.map((c) => (
-                <div key={c.name}>
-                    <div id='countryFlagImg'>
+                <div key={c.name} id='country-container'>
+                    <div id='country-flag-img'>
                         <img src={c.flags.svg} alt={c.flags.alt} />
                     </div>
 
-                    <div id='countryDetails'>
+                    <div id='country-details'>
                         <h1>{c.name.common}</h1>
-                        <ul>
-                            <li>Capital: {c.capital}, {c.name.common}</li>
+                        <ul id='country-dets-list'>
+                            <li>Capital: {c.capital}</li>
                             <li>Population: {c.population.toLocaleString()}</li>
                             <li>Continent: {c.continents}</li>
                             <li>Exchange Rate from $1 USD = {currSymbol} {exchangeRate} {countryCurrency}</li>
