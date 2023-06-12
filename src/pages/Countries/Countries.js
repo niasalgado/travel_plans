@@ -14,7 +14,6 @@ export default function Countries( {setPlanCountry, planCountry, visitedCountry,
             console.log(error)
         }
     };
-
     useEffect(() => { 
         fetchCountries();
     }, []);
@@ -29,7 +28,6 @@ export default function Countries( {setPlanCountry, planCountry, visitedCountry,
             console.log(error)
         }
     }
-
     function handleSearch(evt) {
         evt.preventDefault()
         searchCountries()
@@ -53,7 +51,13 @@ export default function Countries( {setPlanCountry, planCountry, visitedCountry,
         </div>
         <div className="cardGrid">
             {countries.map((country) => (
-                <CountryCard key={country.name.common} {...country} setPlanCountry={setPlanCountry} planCountry={planCountry} setVisitedCountry={setVisitedCountry} visitedCountry={visitedCountry} />
+                <CountryCard key={country.name.common} 
+                    {...country} 
+                    setPlanCountry={setPlanCountry} 
+                    planCountry={planCountry} 
+                    setVisitedCountry={setVisitedCountry} 
+                    visitedCountry={visitedCountry} 
+                />
             ))}
         </div>
         </>

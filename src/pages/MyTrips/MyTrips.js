@@ -9,15 +9,15 @@ export default function MyTrips( {planCountry, visitedCountry} ) {
       <div className='listsContainer'>
         <div className="trips-list">
         <h3>Planning To Visit</h3>
-          {planCountry.map((country) => {
-            return <li>{country}</li>
+          {planCountry.map((country, index) => {
+            return <li key={index}>{country}</li>
           })}
         </div>
 
         <div className="trips-list">
         <h3>Already Visited</h3>
-          {visitedCountry.map((country) => {
-            return <li>{country}</li>
+          {visitedCountry.map((country, index) => {
+            return <li key={index}>{country}</li>
           })}
         </div>
       </div>

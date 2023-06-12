@@ -5,25 +5,18 @@ import './country.css';
 
 export default function Country() {
     const [country, setCountry] = useState([]);
-
     const [countryCurrency, setCountryCurrency] = useState('');
-
     const [currSymbol, setcurrSymbol] = useState('');
-
     const {name} = useParams();
 
-    
     useEffect(() => {
         const fetchCountry = async() => {
             try {
                 const response = await fetch(`https://restcountries.com/v3.1/name/${name}`)
-
                 const data = await response.json()
                 setCountry(data)
-
                 const currency = Object.entries(data[0].currencies)[0][0];
                 setCountryCurrency(currency)
-
                 const symbol = Object.entries(country[0].currencies)[0][1].symbol;
                 setcurrSymbol(symbol)
                 
@@ -60,8 +53,6 @@ export default function Country() {
         fetchRate();
     }, []);
 
-
-    
   return (
     <>
         <NavBar />
@@ -71,7 +62,6 @@ export default function Country() {
                     <div id='country-flag-img'>
                         <img src={c.flags.svg} alt={c.flags.alt} />
                     </div>
-
                     <div id='country-details'>
                         <h1>{c.name.common}</h1>
                         <ul id='country-dets-list'>
@@ -81,9 +71,6 @@ export default function Country() {
                             <li>Exchange Rate from $1 USD = {currSymbol} {exchangeRate} {countryCurrency}</li>
                         </ul>
                     </div>
-
-
-
                 </div>
             ))}
         </div>

@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import NavBar from '../../components/NavBar/NavBar'
 import { Link } from 'react-router-dom'
 import { Pagination}  from "swiper";
+import NavBar from '../../components/NavBar/NavBar'
 import './home.css'
 import "swiper/css";
 import "swiper/css/pagination";
@@ -40,11 +40,13 @@ export default function Home() {
           modules={[Pagination]}
           className="mySwiper"
         >
-            {homeCountries.map((country) => (
-              <SwiperSlide>
+            {homeCountries.map((country, index) => (
+              <SwiperSlide key={index}>
                 <Link to={`/${country.name.common}`}>
-                  <img className='flag-img' src={country.flags.svg} alt={country.flags.alt}></img>
-                  <h2>{country.name.common}</h2>
+                  <div >
+                    <img className='flag-img' src={country.flags.svg} alt={country.flags.alt}  ></img>
+                    <h2>{country.name.common}</h2>
+                  </div>
                 </Link>
               </SwiperSlide>
             ))}
