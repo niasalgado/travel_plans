@@ -46,6 +46,7 @@ The most challenging aspect of this project was learning how to access, parse, a
 
 ## Next Steps
 - To add a backend so a user's plans can be saved to a database, and accessed every time they log in.
+- I'd also like to give user's the option to choose their home country to dynamically render other foreign countries' exchange rates, not just ones from the US.
 
 ## Contributions
 Front-end development: Nia Salgado<br/>
