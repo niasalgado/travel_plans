@@ -51,7 +51,6 @@ export default function Countries( {setPlanCountry, planCountry, visitedCountry,
                 <button type='submit' value='search' className='trips-button'>Search</button>
             </form>
         </div>
-
         <div className="cardGrid">
             {countries.map((country) => (
                 <CountryCard key={country.name.common} {...country} setPlanCountry={setPlanCountry} planCountry={planCountry} setVisitedCountry={setVisitedCountry} visitedCountry={visitedCountry} />
