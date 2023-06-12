@@ -26,6 +26,9 @@ Travel Plans is an organizing app, where users can view a list of every country 
 - ReactJS Framework
 - HTML
 - CSS
+- Git
+- GitHub
+- VS Code
 - [Trello](https://trello.com/b/h95Cw5W5/capstone-project-4) and InVision for project planning
 - Netlify for app deployment
 
